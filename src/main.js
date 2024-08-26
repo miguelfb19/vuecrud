@@ -14,12 +14,6 @@ import eliminarEmpleado from '@/components/eliminarEmpleado'
 const routes = [
     {path: '/home', component: welcomeComponent},
     {path: '/', component: welcomeComponent},
-    {path: '/form', component: EntryData},
-    {path: '/table', component: tablaDatos},
-    {path: '/search', component: buscarEmpleados},
-    {path: '/delete', component: eliminarEmpleado},
-    {path: '/:pathMatch(.*)*', component: ErrorComponent}, //el '/:pathMatch(.*)*' sirve para crear una ruta comodín (se usa comunmente para crear pagina de error)
-    //{path: '/nombreRuta', component: nombreComponente},
 ]
 
 const router = createRouter({
