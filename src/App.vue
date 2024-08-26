@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import principalComponent from "@/components/principalComponent";
+import principalComponent from "@/components/principalComponent.vue";
 
 export default {
   name: "App",
