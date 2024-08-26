@@ -1,0 +1,517 @@
+
+body {
+  text-align: center;
+  margin: 0px;
+  padding-bottom: 20px; /*se pone el margin y padding de 0px ya que el navegador tiene un margin predeterminado que no me permite tener los elementos bien unidos al borde de la ventana*/
+
+  /*FUENTES*/
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased; /*con esto determino un estiloo de letra suave para chrome y safari*/
+  -moz-font-smoothing: antialiased; /*con esto determino un estilo de letra suave para mozilla*/
+  -moz-osx-font-smoothing: antialiased; /*con esto determino un estiloo de letra suave para mozilla en macOS*/
+}
+
+.center {
+  width: 100%;
+  margin: 0px auto;
+}
+
+#header {
+  height: 300px;
+  width: 100%;
+  background: rgb(63, 242, 93);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(63, 242, 93, 1) 0%,
+    rgba(130, 130, 130, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(63, 242, 93, 1) 0%,
+    rgba(130, 130, 130, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(63, 242, 93, 1) 0%,
+    rgba(130, 130, 130, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3ff25d",endColorstr="#828282",GradientType=1);
+}
+
+#header h1 {
+  margin: 0px;
+  margin-top: -7px;
+}
+
+.logo {
+  height: 250px;
+}
+
+.clearfix {
+  /*esto hace que el contenido de abajo no me interfiera con el header*/
+  clear: both;
+  float: none;
+}
+
+#menu {
+  margin: auto;
+  font-size: 18px;
+  background: rgb(63, 242, 93);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(63, 242, 93, 1) 43%,
+    rgba(130, 130, 130, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(63, 242, 93, 1) 43%,
+    rgba(130, 130, 130, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(63, 242, 93, 1) 43%,
+    rgba(130, 130, 130, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3ff25d",endColorstr="#828282",GradientType=1);
+  border: 1px solid;
+  width: 70%;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: inset -7px -7px 21px #28983b, inset 7px 7px 21px #56ff7f;
+}
+
+#menu ul li {
+  list-style: none; /*esto me quita los puntos de la lista*/
+  display: inline-block; /*pone los elemtos de manera contigua*/
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#menu a {
+  text-decoration: none; /*esto me quita la linea debajo de los enlaces*/
+  color: black;
+  transition: 100ms all;
+}
+
+#menu a:hover {
+  color: rgb(77, 85, 78);
+}
+
+#welcome {
+  margin: auto;
+  font-size: 25px;
+  width: 65%;
+}
+
+#welcome a {
+  font-size: 20px;
+  text-decoration: none; /*esto me quita la linea debajo de los enlaces*/
+  color: green;
+  transition: 100ms all;
+}
+
+#welcome a:hover {
+  color: rgb(63, 242, 93);
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  /*selecciona todo los inputs de tipo text*/
+  width: 100%;
+  min-height: 25px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+  padding: 3px;
+  transition: 200ms all;
+  border-radius: 4px;
+}
+
+#formulario {
+  margin: auto;
+  padding-top: 20px;
+  width: 50%;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.form-group {
+  width: 55%;
+  margin: 0px auto;
+}
+
+.btn {
+  cursor: pointer; /*cuando haga hover me pone el dedito de cursor*/
+  background: #3ff25d;
+  box-shadow: inset -7px -7px 21px #28983b, inset 7px 7px 21px #56ff7f;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background: rgb(161, 255, 177);
+}
+
+.buttomsform {
+  margin: 20px 0px 20px 0px;
+  display: flex; /*Botones contiguos*/
+  gap: 20px; /*Espacio entre botones*/
+  justify-content: center; /*centrar horizontalmente*/
+  align-items: center; /*centrar verticalmente*/
+}
+
+.btnOrder {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.errorLink {
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+}
+
+.errorLink:hover {
+  color: #3ff25d;
+}
+
+.encabezado {
+  font-size: large;
+  font-weight: bolder;
+}
+
+table,
+tr,
+th,
+td {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 7px;
+}
+
+th {
+  border: solid 2px;
+}
+
+table {
+  width: 70%;
+  margin: 0 auto;
+  border: solid 2px;
+}
+
+.tabla {
+  width: 100%;
+}
+
+.noEmpleados {
+  margin: 50px;
+}
+
+.success {
+  color: #28983b;
+  font-weight: bolder;
+}
+
+.buscador {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+.btns-buscador {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.inputDelete {
+  width: 20%;
+}
+
+.inputDelete input[type="text"] {
+  border: solid black 1px;
+}
+
+.inputDelete input[type="button"] {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#eliminarEmpleados b {
+  color: red;
+  text-decoration: underline;
+}
+
+.comprobanteEliminacion .btn-yesno{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+body {
+  text-align: center;
+  margin: 0px;
+  padding-bottom: 20px; /*se pone el margin y padding de 0px ya que el navegador tiene un margin predeterminado que no me permite tener los elementos bien unidos al borde de la ventana*/
+
+  /*FUENTES*/
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased; /*con esto determino un estiloo de letra suave para chrome y safari*/
+  -moz-font-smoothing: antialiased; /*con esto determino un estilo de letra suave para mozilla*/
+  -moz-osx-font-smoothing: antialiased; /*con esto determino un estiloo de letra suave para mozilla en macOS*/
+}
+
+.center {
+  width: 100%;
+  margin: 0px auto;
+}
+
+#header {
+  height: 300px;
+  width: 100%;
+  background: rgb(63, 242, 93);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(63, 242, 93, 1) 0%,
+    rgba(130, 130, 130, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(63, 242, 93, 1) 0%,
+    rgba(130, 130, 130, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(63, 242, 93, 1) 0%,
+    rgba(130, 130, 130, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3ff25d",endColorstr="#828282",GradientType=1);
+}
+
+#header h1 {
+  margin: 0px;
+  margin-top: -7px;
+}
+
+.logo {
+  height: 250px;
+}
+
+.clearfix {
+  /*esto hace que el contenido de abajo no me interfiera con el header*/
+  clear: both;
+  float: none;
+}
+
+#menu {
+  margin: auto;
+  font-size: 18px;
+  background: rgb(63, 242, 93);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(63, 242, 93, 1) 43%,
+    rgba(130, 130, 130, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(63, 242, 93, 1) 43%,
+    rgba(130, 130, 130, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(63, 242, 93, 1) 43%,
+    rgba(130, 130, 130, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#3ff25d",endColorstr="#828282",GradientType=1);
+  border: 1px solid;
+  width: 70%;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: inset -7px -7px 21px #28983b, inset 7px 7px 21px #56ff7f;
+}
+
+#menu ul li {
+  list-style: none; /*esto me quita los puntos de la lista*/
+  display: inline-block; /*pone los elemtos de manera contigua*/
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+#menu a {
+  text-decoration: none; /*esto me quita la linea debajo de los enlaces*/
+  color: black;
+  transition: 100ms all;
+}
+
+#menu a:hover {
+  color: rgb(77, 85, 78);
+}
+
+#welcome {
+  margin: auto;
+  font-size: 25px;
+  width: 65%;
+}
+
+#welcome a {
+  font-size: 20px;
+  text-decoration: none; /*esto me quita la linea debajo de los enlaces*/
+  color: green;
+  transition: 100ms all;
+}
+
+#welcome a:hover {
+  color: rgb(63, 242, 93);
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  /*selecciona todo los inputs de tipo text*/
+  width: 100%;
+  min-height: 25px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+  padding: 3px;
+  transition: 200ms all;
+  border-radius: 4px;
+}
+
+#formulario {
+  margin: auto;
+  padding-top: 20px;
+  width: 50%;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+
+.form-group {
+  width: 55%;
+  margin: 0px auto;
+}
+
+.btn {
+  cursor: pointer; /*cuando haga hover me pone el dedito de cursor*/
+  background: #3ff25d;
+  box-shadow: inset -7px -7px 21px #28983b, inset 7px 7px 21px #56ff7f;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 8px;
+}
+
+.btn:hover {
+  background: rgb(161, 255, 177);
+}
+
+.buttomsform {
+  margin: 20px 0px 20px 0px;
+  display: flex; /*Botones contiguos*/
+  gap: 20px; /*Espacio entre botones*/
+  justify-content: center; /*centrar horizontalmente*/
+  align-items: center; /*centrar verticalmente*/
+}
+
+.btnOrder {
+  margin-bottom: 30px;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.errorLink {
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+}
+
+.errorLink:hover {
+  color: #3ff25d;
+}
+
+.encabezado {
+  font-size: large;
+  font-weight: bolder;
+}
+
+table,
+tr,
+th,
+td {
+  border: 1px solid;
+  border-collapse: collapse;
+  padding: 7px;
+}
+
+th {
+  border: solid 2px;
+}
+
+table {
+  width: 70%;
+  margin: 0 auto;
+  border: solid 2px;
+}
+
+.tabla {
+  width: 100%;
+}
+
+.noEmpleados {
+  margin: 50px;
+}
+
+.success {
+  color: #28983b;
+  font-weight: bolder;
+}
+
+.buscador {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  width: 95%;
+  margin: auto;
+  padding-bottom: 40px;
+}
+
+.btns-buscador {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.inputDelete {
+  width: 20%;
+}
+
+.inputDelete input[type="text"] {
+  border: solid black 1px;
+}
+
+.inputDelete input[type="button"] {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#eliminarEmpleados b {
+  color: red;
+  text-decoration: underline;
+}
+
+.comprobanteEliminacion .btn-yesno{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}

@@ -1,26 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <!DOCTYPE <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>CRUD Universidad de Manizales</title>
+    </head>
+    <body>
+      <div class="center">
+        <principal-component></principal-component>
+        <router-view></router-view>
+      </div>
+    </body>
+  </html>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import principalComponent from "@/components/principalComponent";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    principalComponent,
+  },
+};
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+@import "@/assets/css/styles";
 </style>
