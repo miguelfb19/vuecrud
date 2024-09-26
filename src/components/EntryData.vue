@@ -5,7 +5,7 @@
       <label for="nombre">Nombre Completo:</label>
       <input
         type="text"
-        name="nombre"
+        id="nombre"
         placeholder="Ej: Pedro Pérez"
         v-model="empleados.nombre"
         required
@@ -14,7 +14,7 @@
     <div class="clearfix"></div>
     <div class="form-group">
       <label for="edad">Edad:</label>
-      <input type="number" name="edad" v-model="empleados.edad" required />
+      <input type="number" id="edad" v-model="empleados.edad" required />
     </div>
     <div class="clearfix"></div>
     <div class="form-group">
@@ -24,7 +24,7 @@
       <input
         type="text"
         multiple
-        name="lenguajes"
+        id="lenguajes"
         placeholder="Ej. Python, Ruby, ..."
         v-model="empleados.lenguajes"
         required
@@ -35,7 +35,7 @@
       <label for="aniosExp">Años de experiencia programando:</label>
       <input
         type="number"
-        name="aniosExp"
+        id="aniosExp"
         v-model="empleados.añosExp"
         required
       />
