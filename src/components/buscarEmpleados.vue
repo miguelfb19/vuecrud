@@ -1,65 +1,72 @@
 <template>
-  <h1 style="margin-top: 35px">BUSCAR POR:</h1>
-  <section class="buscador">
-    <div class="form-group">
-      <label for="nombre">Nombre:</label>
-      <input
-        type="text"
-        name="nombre"
-        placeholder="Ej: Pedro Pérez"
-        v-model="camposDeBusqueda.nombreDigitado"
-      />
+  <section class="search">
+    <h1 style="margin-top: 35px">BUSCAR POR:</h1>
+    <form class="buscador">
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input
+          type="text"
+          id="nombre"
+          placeholder="Ej: Pedro Pérez"
+          v-model="camposDeBusqueda.nombreDigitado"
+        />
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group">
+        <label for="edad">Edad mínima:</label>
+        <input
+          type="number"
+          id="edad"
+          v-model="camposDeBusqueda.edadDigitada"
+        />
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group">
+        <label for="lenguajes">Lenguajes de programación:</label>
+        <input
+          type="text"
+          multiple
+          id="lenguajes"
+          placeholder="Ej. Python, Ruby, ..."
+          v-model="camposDeBusqueda.lenguajesDigitados"
+        />
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group">
+        <label for="aniosExp">Años mínimos de experiencia:</label>
+        <input
+          type="number"
+          id="aniosExp"
+          v-model="camposDeBusqueda.añosDigitados"
+        />
+      </div>
+    </form>
+    <div class="btns-buscador">
+      <input type="button" value="Buscar" class="btn" @click.prevent="buscar" />
     </div>
-    <div class="clearfix"></div>
-    <div class="form-group">
-      <label for="edad">Edad mínima:</label>
-      <input
-        type="number"
-        name="edad"
-        v-model="camposDeBusqueda.edadDigitada"
-      />
-    </div>
-    <div class="clearfix"></div>
-    <div class="form-group">
-      <label for="lenguajes">Lenguajes de programación:</label>
-      <input
-        type="text"
-        multiple
-        name="lenguajes"
-        placeholder="Ej. Python, Ruby, ..."
-        v-model="camposDeBusqueda.lenguajesDigitados"
-      />
-    </div>
-    <div class="clearfix"></div>
-    <div class="form-group">
-      <label for="aniosExp">Años mínimos de experiencia:</label>
-      <input
-        type="number"
-        name="aniosExp"
-        v-model="camposDeBusqueda.añosDigitados"
-      />
+    <div class="containerTable">
+      <table v-if="buscarEvent">
+        <thead>
+          <tr class="encabezadoTablas">
+            <th>ID</th>
+            <th>Nombre empleado</th>
+            <th>Edad</th>
+            <th>Lenguajes de programación</th>
+            <th>Años de experiencia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="empleado in empleadosEncontrados" :key="empleado">
+            <td>{{ empleado.id }}</td>
+            <td>{{ empleado.nombre }}</td>
+            <td>{{ empleado.edad }}</td>
+            <td>{{ empleado.lenguajes }}</td>
+            <td>{{ empleado.añosExp }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </section>
-  <div class="btns-buscador">
-    <input type="button" value="Buscar" class="btn" @click.prevent="buscar" />
-  </div>
-
-  <table v-if="buscarEvent">
-    <tr class="encabezado">
-      <th>ID</th>
-      <th>Nombre empleado</th>
-      <th>Edad</th>
-      <th>Lenguajes de programación</th>
-      <th>Años de experiencia</th>
-    </tr>
-    <tr v-for="empleado in empleadosEncontrados" :key="empleado">
-      <td>{{ empleado.id }}</td>
-      <td>{{ empleado.nombre }}</td>
-      <td>{{ empleado.edad }}</td>
-      <td>{{ empleado.lenguajes }}</td>
-      <td>{{ empleado.añosExp }}</td>
-    </tr>
-  </table>
 </template>
 
 <script>
@@ -82,8 +89,6 @@ export default {
   },
 
   mounted() {
-    console.log(this.localDates);
-    console.log(this.camposDeBusqueda.nombreDigitado);
   },
 
   methods: {

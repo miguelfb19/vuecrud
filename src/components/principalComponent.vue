@@ -3,7 +3,6 @@
     <img class="logo" src="../assets/logo-umanizales.png" />
     <h1>CRUD EMPLEADOS</h1>
   </div>
-  <div class="center"></div>
   <nav id="menu">
     <ul>
       <li>
@@ -23,7 +22,6 @@
       </li>
     </ul>
   </nav>
-  <div class="center"></div>
 </template>
 
 <script>

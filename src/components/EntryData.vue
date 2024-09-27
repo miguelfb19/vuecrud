@@ -1,58 +1,59 @@
 <template>
-  <h1>INGRESA LOS DATOS A CONTINUACIÓN:</h1>
-  <form id="formulario" @submit.prevent="guardarDatos">
-    <div class="form-group">
-      <label for="nombre">Nombre Completo:</label>
-      <input
-        type="text"
-        id="nombre"
-        placeholder="Ej: Pedro Pérez"
-        v-model="empleados.nombre"
-        required
-      />
-    </div>
-    <div class="clearfix"></div>
-    <div class="form-group">
-      <label for="edad">Edad:</label>
-      <input type="number" id="edad" v-model="empleados.edad" required />
-    </div>
-    <div class="clearfix"></div>
-    <div class="form-group">
-      <label for="lenguajes"
-        >Lenguajes de programación que sabe (separados por coma ','):</label
-      >
-      <input
-        type="text"
-        multiple
-        id="lenguajes"
-        placeholder="Ej. Python, Ruby, ..."
-        v-model="empleados.lenguajes"
-        required
-      />
-    </div>
-    <div class="clearfix"></div>
-    <div class="form-group">
-      <label for="aniosExp">Años de experiencia programando:</label>
-      <input
-        type="number"
-        id="aniosExp"
-        v-model="empleados.añosExp"
-        required
-      />
-    </div>
-
-    <div class="buttomsform">
-      <input
-        type="submit"
-        value="Enviar"
-        class="btn btn-success buttomsform1"
-      />
-      <input type="reset" value="Borrar" class="btn btn-success buttomsform2" />
-    </div>
-    <div v-if="submitted">
-      <span class="success">¡¡¡DATOS GUARDADOS CON ÉXITO!!!</span>
-    </div>
-  </form>
+  <section class="enterForm">
+    <h1>INGRESA LOS DATOS A CONTINUACIÓN:</h1>
+    <form id="formulario" @submit.prevent="guardarDatos">
+      <div class="form-group">
+        <label for="nombre">Nombre Completo:</label>
+        <input
+          type="text"
+          id="nombre"
+          placeholder="Ej: Pedro Pérez"
+          v-model="empleados.nombre"
+          required
+        />
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group">
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" v-model="empleados.edad" required />
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group">
+        <label for="lenguajes"
+          >Lenguajes de programación que sabe (separados por coma ','):</label
+        >
+        <input
+          type="text"
+          multiple
+          id="lenguajes"
+          placeholder="Ej. Python, Ruby, ..."
+          v-model="empleados.lenguajes"
+          required
+        />
+      </div>
+      <div class="clearfix"></div>
+      <div class="form-group">
+        <label for="aniosExp">Años de experiencia programando:</label>
+        <input
+          type="number"
+          id="aniosExp"
+          v-model="empleados.añosExp"
+          required
+        />
+      </div>
+      <div class="buttomsform">
+        <input
+          type="submit"
+          value="Enviar"
+          class="btn btn-success buttomsform1"
+        />
+        <input type="reset" value="Borrar" class="btn btn-success buttomsform2" />
+      </div>
+      <div v-if="submitted">
+        <span class="success">¡¡¡DATOS GUARDADOS CON ÉXITO!!!</span>
+      </div>
+    </form>
+  </section>
 </template>
 
 <script>

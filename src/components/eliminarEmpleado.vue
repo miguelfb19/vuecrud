@@ -1,5 +1,5 @@
 <template>
-  <section id="eliminarEmpleados">
+  <section class="employeedDelete">
     <h1>DIGITA EL <b>ID</b> DEL EMPLEADO QUE DESEAS ELIMINAR</h1>
     <div class="form-group inputDelete">
       <input
@@ -47,10 +47,6 @@
     <div v-else-if="comprobante && deleteID == ''">
       <h1>DIGITE UN ID PARA ELIMINAR</h1>
     </div>
-
-    <!--<div v-if="comprobante && deleteID!=empleado.id">
-        <h1>¡¡¡EMPLEADO NO REGISTRADO EN LA BASE DE DATOS!!!</h1>
-      </div>-->
   </section>
 </template>
 
